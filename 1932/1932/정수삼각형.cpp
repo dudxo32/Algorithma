@@ -6,11 +6,12 @@ int main()
 {
 	int n;
 	int array[501]; // 숫자를 담을 배열
-	int preArray[500];
+	
 	int sum[501]; // 합을 담을 배열
+	int sum2[501]; // 합을 담을 배열2
 
 	fill_n(sum, 501, 0);
-	
+	fill_n(sum2, 501, 0);
 
 	cin >> n;
 	
@@ -18,36 +19,39 @@ int main()
 	{
 		for (int j = 1; j <= i; j++) //j=층에서의 개수
 		{
-			cin >> array[j];
+			cin >> array[j]; //각층 숫자 입력
 		}
 		
-		if (sum[1] == 0) sum[1] = sum[0] = array[i];
+		if (sum[1] == 0) {
+			sum[1] = sum[0] = array[i];
+			sum2[1] = sum2[0] = array[i];
+		}
 		else
 		{
 			for (int k = 1; k < i; k++)
 			{
-				int temp = sum[k];  //38번째줄 k+1 에 의해 sum값이 바껴ㅑ서 오류남
-
-				if (sum[k] != 0)
+				int temp = sum[k] + array[k];
+				if (sum2[k] < temp)
 				{
-					int a = temp + array[k];
-					sum[k] < a ? sum[k] = a : sum[k];
+					sum2[k] = temp;
 				}
-			//	else
-				//	sum[k] = temp + array[k];
-				sum[k+1] = temp + array[k+1];
+				temp = sum[k] + array[k + 1];
+				if (sum2[k + 1] < temp)
+				{
+					sum2[k + 1] = temp;
+				}
+			}
+			for (int q = 1; q <= i; q++)
+			{
+				sum[q] = sum2[q];
 			}
 		}
-	/*	cout<< i <<"층" << endl;
-		for (int q = 1; q <= i; q++)
-			cout << "[" << sum[q] << "]-";
-		cout << endl <<endl;*/
 	}
-	int max = sum[1];
+
+	int max = sum2[1];
 	for (int i = 2; i <= n; i++)
 	{
-		max < sum[i] ? max = sum[i] : max;
+		max < sum2[i] ? max = sum2[i] : max;
 	}
 	cout << max;
-	system("pause");
 }
