@@ -28,6 +28,6 @@ int main()
 	//start_2302();
 
 	///							The Others
-	//개미 -
+	//개미 
 	//start_4307(); 
 }

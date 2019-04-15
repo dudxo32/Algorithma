@@ -1,7 +1,12 @@
 #include <iostream>
 #include <algorithm>
 #include <math.h>
-
+/*
+개미가 반대로 가는건 아무런 의미가 없음
+길이의 중간값(홀수라면 올림값)에서 각 길이의 뺀후 절대값 비교
+뺄셈의 절대값이 가장 작은 위치에서 각 양끝 0,l 을  빼고 그중 작은 값이 가장 빨리 떨어 지는 경우
+뺄셈의 절대값이 가장 큰 위치에서 각 양끝 0,l 을 빼고 그중 가장 큰 값이 가장 늦게 떨어 지는 경우
+*/
 using namespace std;
 
 void start_4307()
@@ -19,26 +24,29 @@ void start_4307()
 		{
 			cin >> array[i];
 		}
+
+		sort(array, array + n + 1);
+
+		int mid = ceil(l / 2);
+		int maxM = abs(mid - array[1]);
+		int minM = abs(mid - array[1]);
+		int maxIndex=1, minIndex=1;
+		for (int i = 2; i <= n; i++)
+		{
+			if (abs(mid - array[i]) > maxM)
+			{
+				maxM = abs(mid - array[i]);
+				maxIndex = i;
+			}
+			if (abs(mid - array[i]) < minM)
+			{
+				minM = abs(mid - array[i]);
+				minIndex = i;
+			}
+		}
+
+		cout << min(abs(l - array[minIndex]), abs(array[minIndex] - 0)) << " "; //짧은경우
+		cout << max(abs(l - array[maxIndex]), abs(array[maxIndex] - 0)) << endl;//긴경우
 	}
-	sort(array, array + n + 1);
-
-	int center = ceil(l / 2);
-
-	int minIndex = 1;
-	int min = abs(array[minIndex] - center);
-
-	int maxIndex = 1;
-	int max = abs(array[maxIndex] - center);
-
-	for (int i = 2; i <= n; i++)
-	{
-		minIndex = abs(array[i] - center) < min ? i : minIndex;
-		maxIndex = abs(array[i] - center) > max ? i : maxIndex;
-	}
-	int minResult = abs(1 - array[minIndex]) > abs(l - array[minIndex]) ? abs(l - array[minIndex]) : abs(1 - array[minIndex]);
-	cout << minResult;
-
-	int maxResult = abs(1 - array[maxIndex]) < abs(l - array[maxIndex]) ? abs(l - array[maxIndex]) : abs(1 - array[maxIndex]);
-
-	system("pause");
+	
 }
