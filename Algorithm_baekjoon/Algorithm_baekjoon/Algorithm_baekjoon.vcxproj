@@ -28,6 +28,7 @@
     <ClInclude Include="2302_극장좌석.h" />
     <ClInclude Include="4307_개미.h" />
     <ClInclude Include="5585_거스름돈.h" />
+    <ClInclude Include="9084_동전.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

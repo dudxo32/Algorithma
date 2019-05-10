@@ -5,6 +5,7 @@
 #include "2302_±ØÀåÁÂ¼®.h"
 #include "4307_°³¹Ì.h" 
 #include "5585_°Å½º¸§µ·.h"
+#include "9084_µ¿Àü.h"
 using namespace std;
 
 int main()
@@ -14,7 +15,7 @@ int main()
 	//start_1931();	
 
 	//°Å½º¸§µ·
-	start_5585();
+	//start_5585();
 
 
 	///							Dynamic Algorithm
@@ -26,6 +27,9 @@ int main()
 
 	//±ØÀåÁÂ¼®
 	//start_2302();
+
+	//µ¿Àü
+	start_9084();
 
 	///							The Others
 	//°³¹Ì 

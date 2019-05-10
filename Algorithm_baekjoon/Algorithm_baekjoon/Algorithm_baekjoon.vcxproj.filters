@@ -20,23 +20,26 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="1932_정수삼각형.h">
-      <Filter>소스 파일</Filter>
+    <ClInclude Include="5585_거스름돈.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="1931_회의실배정.h">
-      <Filter>소스 파일</Filter>
+      <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="2302_극장좌석.h">
-      <Filter>소스 파일</Filter>
+    <ClInclude Include="1932_정수삼각형.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="1965_상자넣기.h">
-      <Filter>소스 파일</Filter>
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="2302_극장좌석.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="4307_개미.h">
-      <Filter>소스 파일</Filter>
+      <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="5585_거스름돈.h">
-      <Filter>소스 파일</Filter>
+    <ClInclude Include="9084_동전.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
