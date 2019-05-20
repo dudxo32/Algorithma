@@ -41,5 +41,11 @@
     <ClInclude Include="9084_동전.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="11066_파일합치기.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="11052_카드구매하기.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

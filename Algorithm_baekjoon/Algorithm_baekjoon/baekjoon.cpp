@@ -6,6 +6,8 @@
 #include "4307_개미.h" 
 #include "5585_거스름돈.h"
 #include "9084_동전.h"
+#include "11066_파일합치기.h"
+#include "11052_카드구매하기.h"
 using namespace std;
 
 int main()
@@ -29,7 +31,15 @@ int main()
 	//start_2302();
 
 	//동전
-	start_9084();
+	//start_9084();
+
+	//파일합치기
+	start_11066();
+
+	//카드구매하기
+	//start_11052();
+
+		
 
 	///							The Others
 	//개미 

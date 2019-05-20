@@ -22,6 +22,8 @@
     <ClCompile Include="baekjoon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="11052_카드구매하기.h" />
+    <ClInclude Include="11066_파일합치기.h" />
     <ClInclude Include="1932_정수삼각형.h" />
     <ClInclude Include="1931_회의실배정.h" />
     <ClInclude Include="1965_상자넣기.h" />
