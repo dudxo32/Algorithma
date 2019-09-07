@@ -27,6 +27,7 @@
     <ClInclude Include="1932_정수삼각형.h" />
     <ClInclude Include="1931_회의실배정.h" />
     <ClInclude Include="1965_상자넣기.h" />
+    <ClInclude Include="2290_LCDTest.h" />
     <ClInclude Include="2302_극장좌석.h" />
     <ClInclude Include="2577_숫자의개수.h" />
     <ClInclude Include="3023_마술사이민혁.h" />
